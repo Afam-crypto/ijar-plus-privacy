@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>سياسة الخصوصية — إيجار بلس | Privacy Policy — Ijar Plus</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --green: #1B4332;
+      --green-mid: #2D6A4F;
+      --green-light: #D1FAE5;
+      --gold: #92400E;
+      --gold-light: #FFFBEB;
+      --text: #0A0F0D;
+      --sub: #4B5563;
+      --muted: #9CA3AF;
+      --border: #E2E8E5;
+      --bg: #F7FAF8;
+      --card: #FFFFFF;
+      --radius: 16px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Cairo', 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.8;
+    }
+
+    /* ── Header ── */
+    header {
+      background: var(--green);
+      padding: 48px 24px 40px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    header::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 70% 50%, rgba(45,106,79,0.6) 0%, transparent 70%);
+    }
+    header::after {
+      content: '🔒';
+      position: absolute;
+      right: -10px;
+      top: -10px;
+      font-size: 140px;
+      opacity: 0.06;
+      filter: grayscale(1);
+    }
+    .app-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 50px;
+      padding: 8px 20px;
+      margin-bottom: 20px;
+    }
+    .app-badge span { color: #fff; font-size: 14px; font-weight: 600; }
+    header h1 {
+      color: #fff;
+      font-size: clamp(24px, 5vw, 38px);
+      font-weight: 900;
+      letter-spacing: -0.5px;
+      margin-bottom: 8px;
+      position: relative;
+    }
+    header p {
+      color: rgba(255,255,255,0.72);
+      font-size: 14px;
+      position: relative;
+    }
+
+    /* ── Language Toggle ── */
+    .lang-bar {
+      background: var(--card);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      justify-content: center;
+      gap: 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+    .lang-btn {
+      padding: 14px 36px;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      border: none;
+      background: transparent;
+      color: var(--muted);
+      transition: all .2s;
+      border-bottom: 3px solid transparent;
+      font-family: 'Cairo', 'Inter', sans-serif;
+    }
+    .lang-btn.active {
+      color: var(--green);
+      border-bottom-color: var(--green);
+    }
+
+    /* ── Main ── */
+    main {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 40px 20px 80px;
+    }
+
+    .section {
+      background: var(--card);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      padding: 28px;
+      margin-bottom: 16px;
+      transition: box-shadow .2s;
+    }
+    .section:hover { box-shadow: 0 4px 24px rgba(27,67,50,0.08); }
+
+    .section-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: var(--green-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      margin-bottom: 14px;
+    }
+
+    .section h2 {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--green);
+      margin-bottom: 12px;
+    }
+
+    .section p, .section li {
+      font-size: 14px;
+      color: var(--sub);
+      margin-bottom: 8px;
+    }
+    .section ul {
+      padding-right: 20px;
+      padding-left: 0;
+    }
+    [dir="ltr"] .section ul {
+      padding-left: 20px;
+      padding-right: 0;
+    }
+    .section li { list-style: none; padding-right: 0; position: relative; }
+    .section li::before { content: '✓'; color: var(--green); font-weight: 700; margin-left: 8px; }
+    [dir="ltr"] .section li::before { margin-left: 0; margin-right: 8px; }
+
+    /* ── Highlight box ── */
+    .highlight {
+      background: var(--gold-light);
+      border: 1px solid #FDE68A;
+      border-radius: 10px;
+      padding: 14px 16px;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    .highlight p { color: var(--gold); font-size: 13px; margin: 0; }
+
+    /* ── Contact card ── */
+    .contact-card {
+      background: var(--green);
+      border-radius: var(--radius);
+      padding: 28px;
+      text-align: center;
+      margin-bottom: 16px;
+    }
+    .contact-card h2 { color: #fff; font-size: 17px; margin-bottom: 8px; }
+    .contact-card p { color: rgba(255,255,255,0.75); font-size: 13px; margin-bottom: 4px; }
+    .contact-card a {
+      color: #6EE7B7;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 15px;
+    }
+
+    /* ── Last updated ── */
+    .meta {
+      text-align: center;
+      color: var(--muted);
+      font-size: 12px;
+      margin-bottom: 32px;
+    }
+
+    /* ── Hidden panes ── */
+    .pane { display: none; }
+    .pane.active { display: block; }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      padding: 24px;
+      color: var(--muted);
+      font-size: 12px;
+      border-top: 1px solid var(--border);
+    }
+
+    @media (max-width: 600px) {
+      .section { padding: 20px; }
+      header { padding: 36px 16px 30px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="app-badge">
+    <span>🚗 إيجار بلس — Ijar Plus</span>
+  </div>
+  <h1>سياسة الخصوصية<br/><small style="font-size:0.55em;opacity:0.8">Privacy Policy</small></h1>
+  <p>آخر تحديث: يونيو 2025 &nbsp;·&nbsp; Last updated: June 2025</p>
+</header>
+
+<!-- Language Bar -->
+<div class="lang-bar">
+  <button class="lang-btn active" onclick="switchLang('ar')">العربية</button>
+  <button class="lang-btn" onclick="switchLang('en')">English</button>
+</div>
+
+<main>
+
+  <!-- ══════════════════════════════════════════════════
+       ARABIC
+  ══════════════════════════════════════════════════ -->
+  <div id="pane-ar" class="pane active" dir="rtl">
+    <p class="meta">آخر تحديث: يونيو 2025</p>
+
+    <div class="section">
+      <div class="section-icon">📋</div>
+      <h2>١. مقدمة</h2>
+      <p>
+        مرحباً بك في <strong>إيجار بلس</strong>، منصة تأجير السيارات بين الأفراد في المملكة العربية السعودية.
+        نحن نحترم خصوصيتك ونلتزم بحماية بياناتك الشخصية وفقاً لنظام حماية البيانات الشخصية السعودي (PDPL)
+        وسياسات Apple App Store.
+      </p>
+      <p>
+        باستخدامك للتطبيق فإنك توافق على هذه السياسة. إذا لم توافق، يُرجى التوقف عن استخدام التطبيق.
+      </p>
+    </div>
+
+    <div class="section">
+      <div class="section-icon">📦</div>
+      <h2>٢. البيانات التي نجمعها</h2>
+      <ul>
+        <li>الاسم الكامل ورقم الهاتف لإنشاء الحساب والتحقق عبر OTP</li>
+        <li>صورة رخصة القيادة وبطاقة الهوية الوطنية للتحقق من الهوية</li>
+        <li>صور السيارة واستمارة التسجيل ووثيقة التأمين (للمؤجرين)</li>
+        <li>الموقع الجغرافي التقريبي لعرض السيارات القريبة</li>
+        <li>بيانات الحجوزات والمحادثات داخل التطبيق</li>
+        <li>بيانات الدفع — تُعالَج عبر بوابات دفع آمنة (HyperPay) ولا تُخزَّن على خوادمنا</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <div class="section-icon">🎯</div>
+      <h2>٣. كيف نستخدم بياناتك</h2>
+      <ul>
+        <li>إنشاء حسابك والتحقق من هويتك</li>
+        <li>تيسير عمليات تأجير واستئجار السيارات</li>
+        <li>إرسال إشعارات الحجز والتأكيد عبر Firebase</li>
+        <li>عرض السيارات على الخريطة بموقع تقريبي</li>
+        <li>حل النزاعات وتحسين تجربة المستخدم</li>
+        <li>الامتثال للمتطلبات القانونية في المملكة العربية السعودية</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <div class="section-icon">🔐</div>
+      <h2>٤. حماية بياناتك</h2>
+      <p>نطبّق معايير أمنية عالية لحماية بياناتك:</p>
+      <ul>
+        <li>تشفير البيانات أثناء النقل باستخدام TLS 256-bit</li>
+        <li>تخزين آمن على Firebase (Google Cloud) مع تشفير في حالة السكون</li>
+        <li>لا نبيع بياناتك أو نشاركها مع أطراف ثالثة لأغراض تجارية</li>
+        <li>بيانات الدفع لا تمر عبر خوادمنا — تُعالَج مباشرةً من HyperPay</li>
+      </ul>
+      <div class="highlight">
+        <span>⚠️</span>
+        <p>في حال وقوع اختراق أمني يؤثر على بياناتك، سنُعلمك فوراً عبر رقم هاتفك المسجّل.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-icon">🌍</div>
+      <h2>٥. مشاركة البيانات مع الغير</h2>
+      <p>نشارك بياناتك فقط في الحالات التالية:</p>
+      <ul>
+        <li><strong>الطرف الآخر في الإيجار:</strong> الاسم ورقم الهاتف عند إتمام الحجز فقط</li>
+        <li><strong>Firebase / Google:</strong> لتخزين البيانات وإرسال الإشعارات</li>
+        <li><strong>HyperPay:</strong> لمعالجة المدفوعات بأمان</li>
+        <li><strong>Google Maps:</strong> لعرض المواقع على الخريطة</li>
+        <li><strong>الجهات القانونية:</strong> عند الطلب الرسمي من الجهات المختصة في المملكة</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <div class="section-icon">📍</div>
+      <h2>٦. الموقع الجغرافي</h2>
+      <p>
+        نستخدم الموقع الجغرافي لعرض السيارات القريبة منك. قبل الحجز يظهر الموقع <strong>تقريبياً</strong>،
+        وبعد التأكيد يُشارَك الموقع الدقيق بينك وبين صاحب السيارة فقط.
+      </p>
+      <p>يمكنك إلغاء إذن الموقع في إعدادات هاتفك في أي وقت.</p>
+    </div>
+
+    <div class="section">
+      <div class="section-icon">👤</div>
+      <h2>٧. حقوقك</h2>
+      <ul>
+        <li>الوصول إلى بياناتك الشخصية وتصحيحها</li>
+        <li>طلب حذف حسابك وجميع بياناتك</li>
+        <li>سحب موافقتك على معالجة البيانات في أي وقت</li>
+        <li>الاعتراض على معالجة بياناتك لأغراض التسويق</li>
+      </ul>
+      <p>لممارسة هذه الحقوق، تواصل معنا عبر البريد الإلكتروني أدناه.</p>
+    </div>
+
+    <div class="section">
+      <div class="section-icon">🧒</div>
+      <h2>٨. خصوصية الأطفال</h2>
+      <p>
+        تطبيق إيجار بلس مخصص للمستخدمين الذين تجاوزوا <strong>18 عاماً</strong> فقط.
+        لا نجمع بيانات من القاصرين عن قصد. إذا اكتشفنا ذلك، سنحذف الحساب فوراً.
+      </p>
+    </div>
+
+    <div class="section">
+      <div class="section-icon">🔄</div>
+      <h2>٩. تحديثات السياسة</h2>
+      <p>
+        قد نُحدِّث هذه السياسة من وقت لآخر. سنُعلمك بأي تغييرات جوهرية عبر إشعار داخل التطبيق
+        أو رسالة نصية. استمرارك في استخدام التطبيق بعد التحديث يُعدّ موافقةً منك.
+      </p>
+    </div>
+
+    <div class="contact-card">
+      <h2>📩 تواصل معنا</h2>
+      <p>لأي استفسارات أو طلبات تتعلق بخصوصيتك:</p>
+      <p style="margin-top:8px">أحمد المنيعي — مطوّر إيجار بلس</p>
+      <a href="mailto:eng.ahmed0033@gmail.com">eng.ahmed0033@gmail.com</a>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════
+       ENGLISH
+  ══════════════════════════════════════════════════ -->
+  <div id="pane-en" class="pane" dir="ltr" style="font-family:'Inter','Cairo',sans-serif">
+    <p class="meta">Last updated: June 2025</p>
+
+    <div class="section">
+      <div class="section-icon">📋</div>
+      <h2>1. Introduction</h2>
+      <p>
+        Welcome to <strong>Ijar Plus</strong>, a peer-to-peer car rental platform operating in Saudi Arabia.
+        We respect your privacy and are committed to protecting your personal data in accordance with
+        Saudi Arabia's Personal Data Protection Law (PDPL) and Apple App Store guidelines.
+      </p>
+      <p>By using the app, you agree to this policy. If you do not agree, please stop using the app.</p>
+    </div>
+
+    <div class="section">
+      <div class="section-icon">📦</div>
+      <h2>2. Data We Collect</h2>
+      <ul>
+        <li>Full name and phone number for account creation and OTP verification</li>
+        <li>Driver's license and national ID photo for identity verification</li>
+        <li>Car photos, registration document, and insurance policy (for owners)</li>
+        <li>Approximate location to display nearby available cars</li>
+        <li>Booking history and in-app messages</li>
+        <li>Payment data — processed via secure gateways (HyperPay) and never stored on our servers</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <div class="section-icon">🎯</div>
+      <h2>3. How We Use Your Data</h2>
+      <ul>
+        <li>Create your account and verify your identity</li>
+        <li>Facilitate car rental and booking transactions</li>
+        <li>Send booking confirmations and notifications via Firebase</li>
+        <li>Display cars on the map with approximate location</li>
+        <li>Resolve disputes and improve user experience</li>
+        <li>Comply with Saudi Arabian legal requirements</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <div class="section-icon">🔐</div>
+      <h2>4. Data Security</h2>
+      <p>We apply high security standards to protect your data:</p>
+      <ul>
+        <li>Data in transit encrypted using TLS 256-bit</li>
+        <li>Secure storage on Firebase (Google Cloud) with encryption at rest</li>
+        <li>We never sell or share your data with third parties for commercial purposes</li>
+        <li>Payment data never passes through our servers — processed directly by HyperPay</li>
+      </ul>
+      <div class="highlight">
+        <span>⚠️</span>
+        <p>In the event of a security breach affecting your data, we will notify you immediately via your registered phone number.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-icon">🌍</div>
+      <h2>5. Data Sharing</h2>
+      <p>We only share your data in the following cases:</p>
+      <ul>
+        <li><strong>Rental counterpart:</strong> Name and phone number only upon booking confirmation</li>
+        <li><strong>Firebase / Google:</strong> For data storage and push notifications</li>
+        <li><strong>HyperPay:</strong> For secure payment processing</li>
+        <li><strong>Google Maps:</strong> For displaying car locations on the map</li>
+        <li><strong>Legal authorities:</strong> When officially required by Saudi Arabian authorities</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <div class="section-icon">📍</div>
+      <h2>6. Location Data</h2>
+      <p>
+        We use your location to display nearby available cars. Before booking, the car's location is shown
+        <strong>approximately</strong>. After booking confirmation, the exact location is shared only between
+        you and the car owner.
+      </p>
+      <p>You can revoke location permission in your phone settings at any time.</p>
+    </div>
+
+    <div class="section">
+      <div class="section-icon">👤</div>
+      <h2>7. Your Rights</h2>
+      <ul>
+        <li>Access and correct your personal data</li>
+        <li>Request deletion of your account and all associated data</li>
+        <li>Withdraw consent for data processing at any time</li>
+        <li>Object to processing of your data for marketing purposes</li>
+      </ul>
+      <p>To exercise these rights, contact us via email below.</p>
+    </div>
+
+    <div class="section">
+      <div class="section-icon">🧒</div>
+      <h2>8. Children's Privacy</h2>
+      <p>
+        Ijar Plus is intended for users <strong>18 years of age or older</strong> only.
+        We do not knowingly collect data from minors. If discovered, the account will be deleted immediately.
+      </p>
+    </div>
+
+    <div class="section">
+      <div class="section-icon">🔄</div>
+      <h2>9. Policy Updates</h2>
+      <p>
+        We may update this policy from time to time. We will notify you of any material changes via
+        an in-app notification or SMS. Continued use of the app after updates constitutes your acceptance.
+      </p>
+    </div>
+
+    <div class="contact-card">
+      <h2>📩 Contact Us</h2>
+      <p>For any privacy-related inquiries or requests:</p>
+      <p style="margin-top:8px">Ahmed Al-Meniee — Ijar Plus Developer</p>
+      <a href="mailto:eng.ahmed0033@gmail.com">eng.ahmed0033@gmail.com</a>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  © 2025 إيجار بلس — Ijar Plus · جميع الحقوق محفوظة · All rights reserved
+</footer>
+
+<script>
+  function switchLang(lang) {
+    document.querySelectorAll('.pane').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById('pane-' + lang).classList.add('active');
+    event.target.classList.add('active');
+    document.documentElement.lang = lang;
+    document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+  }
+</script>
+</body>
+</html>
